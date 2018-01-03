@@ -76,6 +76,17 @@ view: baseball {
     sql: ${TABLE}.Year ;;
   }
 
+  measure: sum_wins {
+    type: sum
+    sql: ${w} ;;
+  }
+
+  measure: sum_ba {
+    type: sum
+    sql: ${ba} ;;
+  }
+
+
   measure: count {
     type: count
     drill_fields: []
