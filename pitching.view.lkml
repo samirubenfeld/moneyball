@@ -133,6 +133,7 @@ view: pitching {
   }
 
   dimension: team_id {
+#     primary_key: yes
     type: string
     sql: ${TABLE}.teamID ;;
   }

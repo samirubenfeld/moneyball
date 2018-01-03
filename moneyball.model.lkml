@@ -14,7 +14,13 @@ include: "*.dashboard"
 # persist_with: moneyball_default_datagroup
 
 
-explore: batting {}
+explore: batting {
+  join: pitching {
+    type: left_outer
+    sql_on: ${batting.player_id} = ${pitching.player_id} ;;
+    relationship: many_to_one
+  }
+}
 
 explore: pitching{}
 

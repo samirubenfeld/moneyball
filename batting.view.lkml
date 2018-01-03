@@ -62,7 +62,7 @@ view: batting {
   }
 
   dimension: player_id {
-    primary_key: yes
+  primary_key: yes
     type: string
     sql: ${TABLE}.playerID ;;
   }
@@ -103,6 +103,7 @@ view: batting {
   }
 
   dimension: team_id {
+#     primary_key: yes
     type: string
     sql: ${TABLE}.teamID ;;
   }
