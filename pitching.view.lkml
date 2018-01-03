@@ -92,6 +92,7 @@ view: pitching {
   }
 
   dimension: player_id {
+    primary_key: yes
     type: string
     sql: ${TABLE}.playerID ;;
   }
