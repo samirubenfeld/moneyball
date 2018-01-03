@@ -14,4 +14,8 @@ include: "*.dashboard"
 # persist_with: moneyball_default_datagroup
 
 
-explore: baseball {}
+explore: batting {}
+
+explore: pitching{}
+
+explore: salaries {}
