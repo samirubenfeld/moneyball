@@ -17,6 +17,7 @@ view: salaries {
   }
 
   dimension: team_id {
+    primary_key: yes
     type: string
     sql: ${TABLE}.teamID ;;
   }
@@ -24,6 +25,12 @@ view: salaries {
   dimension: year_id {
     type: number
     sql: ${TABLE}.yearID ;;
+  }
+
+  measure: average_salary {
+    type: average
+    sql: ${salary} ;;
+    value_format: "$#,##0.00"
   }
 
   measure: count {
