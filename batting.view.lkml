@@ -113,6 +113,17 @@ view: batting {
     sql: ${TABLE}.yearID ;;
   }
 
+  measure: average_so {
+    type: average
+    sql: ${so} ;;
+  }
+
+  measure: average_hrs {
+    type: average
+    sql: ${hr} ;;
+  }
+
+
   measure: count {
     type: count
     drill_fields: []

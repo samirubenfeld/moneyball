@@ -7,6 +7,7 @@ view: salaries {
   }
 
   dimension: player_id {
+    primary_key: yes
     type: string
     sql: ${TABLE}.playerID ;;
   }
@@ -17,7 +18,7 @@ view: salaries {
   }
 
   dimension: team_id {
-    primary_key: yes
+#     primary_key: yes
     type: string
     sql: ${TABLE}.teamID ;;
   }
@@ -29,6 +30,18 @@ view: salaries {
 
   measure: average_salary {
     type: average
+    sql: ${salary} ;;
+    value_format: "$#,##0.00"
+  }
+
+  measure: min_salary {
+    type: min
+    sql: ${salary} ;;
+    value_format: "$#,##0.00"
+  }
+
+  measure: max_salary {
+    type: max
     sql: ${salary} ;;
     value_format: "$#,##0.00"
   }
