@@ -13,6 +13,7 @@ include: "*.dashboard"
 #
 # persist_with: moneyball_default_datagroup
 
+explore: baseball {}
 
 explore: batting {
   join: pitching {
